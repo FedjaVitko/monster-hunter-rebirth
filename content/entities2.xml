@@ -1,0 +1,33 @@
+<entities anm2root="gfx/" version="1">
+    <entity
+        anm2path="mosquito.anm2" 
+        reroll="true"
+        baseHP="24"
+        boss="0"
+        champion="1"
+        collisionDamage="1"
+        collisionMass="7"
+        collisionRadius="20"
+        friction="1"
+        id="23"
+        name="Mosquito"
+        numGridCollisionPoints="13"
+        shadowSize="23"
+        stageHP="0"
+        variant="4815"
+        portrait="162"
+        bestiary="true"
+        bestiaryTransform="0,-3,1"
+        bestiaryAnim="Flying"
+    >
+        <gibs 
+            amount="10"
+            blood="5"
+            bone="0"
+            eye="1"
+            gut="0"
+            large="1"
+        />
+        <preload-snd id="224" /> <!-- SOUND_MAGGOTCHARGE -->
+    </entity> 
+</entities>
