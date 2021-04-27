@@ -19,7 +19,7 @@ function ModFunctions:EnemyMosquito(entityNPC)
 
     if not boneKnightSpawned then
         debugText = 'the enemy should now be spawned'
-        Isaac.Spawn(EntityType.ENTITY_BONE_KNIGHT, Enemies.Mosquito, 0, entityNPC.Position, Vector(0,0), entityNPC.SpawnerEntity)
+        Isaac.Spawn(EntityType.ENTITY_MAW, Enemies.Mosquito, 0, entityNPC.Position, Vector(0,0), entityNPC.SpawnerEntity)
         boneKnightSpawned = true
     end
 
