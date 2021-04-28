@@ -1,6 +1,6 @@
 -- constants
 local ModFunctions = {}
-local Mod = RegisterMod("Monster Hunteri Rebirth", 1);
+local Mod = RegisterMod("Monster Hunter Rebirth", 1);
 
 local Enemies = {
     Mosquito = Isaac.GetEntityVariantByName("Mosquito")
