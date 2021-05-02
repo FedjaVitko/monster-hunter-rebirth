@@ -1,0 +1,11 @@
+<data>
+    <entity 
+        Group="Ch 2" 
+        ID="888" 
+        Image="icons/FF/mosquito.png" 
+        Kind="MHR"
+        Name="Mosquito"
+        Subtype="0"
+        Variant="1" 
+    />
+</data>

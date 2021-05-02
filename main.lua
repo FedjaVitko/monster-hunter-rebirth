@@ -8,26 +8,28 @@ local Enemies = {
 
 -- state
 local debugText = 'default'
-local boneKnightSpawned = false
+local enemySpawned = false
 
 function ModFunctions:Render()
     Isaac.RenderText(debugText, 150, 150, 255, 0, 0, 50);
 end
+Mod:AddCallback(ModCallbacks.MC_POST_RENDER, ModFunctions.Render);
 
-function ModFunctions:EnemyMosquito(entityNPC)
-    local npcData = entityNPC:GetData()
+function ModFunctions:EnemyMosquito(npc)
+    local npcData = npc:GetData()
 
-    if not boneKnightSpawned then
-        debugText = 'the enemy should now be spawned'
-        Isaac.Spawn(EntityType.ENTITY_MAW, Enemies.Mosquito, 0, entityNPC.Position, Vector(0,0), entityNPC.SpawnerEntity)
-        boneKnightSpawned = true
+    if not enemySpawned then
+        local enemy = Isaac.Spawn(888, 1, 0, npc.Position, Vector(4, 0):Rotated(math.random(360)), npc):ToNPC()
+        enemySpawned = true
     end
 
     -- if (entityNPC:IsActiveEnemy()) then
     --     debugText = entityNPC.StateFrame
     -- end
 end
-
-Mod:AddCallback(ModCallbacks.MC_POST_RENDER, ModFunctions.Render);
-
 Mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, ModFunctions.EnemyMosquito); -- TODO: not sure which EntityType to pick
+
+function ModFunctions.OnNewRoom()
+    enemySpawned = false;
+end
+Mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, ModFunctions.OnNewRoom); -- TODO: not sure which EntityType to pick
