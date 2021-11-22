@@ -1,6 +1,6 @@
 <entities anm2root="gfx/" version="1">
     <entity
-        anm2path="mosquito.anm2" 
+        anm2path="enemies/mosquito/mosquito.anm2" 
         reroll="true"
         baseHP="24"
         boss="0"
@@ -17,17 +17,17 @@
         variant="1"
         portrait="162"
         bestiary="true"
-        bestiaryTransform="0,-3,1"
-        bestiaryAnim="Flying"
+        bestiaryTransform="0,-10,1"
+        bestiaryAnim="Move Hori"
     >
-        <gibs 
-            amount="10"
-            blood="5"
+        <!-- <gibs 
+            amount="122"
+            blood="0"
             bone="0"
-            eye="1"
+            eye="6"
             gut="0"
             large="1"
-        />
+        /> -->
         <preload-snd id="224" /> <!-- SOUND_MAGGOTCHARGE -->
     </entity> 
 </entities>
